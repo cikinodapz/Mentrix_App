@@ -80,7 +80,7 @@ interface ApiResponse {
   };
 }
 
-const categories = ["All", "Depresi", "Mindfulness", "Kesehatan", "Terapi"];
+// const categories = ["All", "Depresi", "Mindfulness", "Kesehatan", "Terapi"];
 
 export default function ArticlesList() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -141,15 +141,15 @@ export default function ArticlesList() {
   };
 
   const filteredArticles = articles
-    .filter((article) => {
-      const matchesSearch =
-        article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        article.content.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory =
-        selectedCategory === "All" ||
-        article.tags.some((tag) => tag.toLowerCase() === selectedCategory.toLowerCase());
-      return matchesSearch && matchesCategory;
-    })
+    // .filter((article) => {
+    //   const matchesSearch =
+    //     article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    //     article.content.toLowerCase().includes(searchQuery.toLowerCase());
+    //   const matchesCategory =
+    //     selectedCategory === "All" ||
+    //     article.tags.some((tag) => tag.toLowerCase() === selectedCategory.toLowerCase());
+    //   return matchesSearch && matchesCategory;
+    // })
     .sort((a, b) => {
       if (sortBy === "newest") return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
       if (sortBy === "oldest") return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
@@ -233,7 +233,7 @@ export default function ArticlesList() {
             </div>
             <div className="flex gap-2">
               <DropdownMenu>
-                <DropdownMenuTrigger asChild>
+                {/* <DropdownMenuTrigger asChild>
                   <Button
                     variant="outline"
                     className="border-purple-500/30 text-purple-100 hover:bg-purple-900/30"
@@ -241,8 +241,8 @@ export default function ArticlesList() {
                     <Filter className="w-4 h-4 mr-2" />
                     {selectedCategory}
                   </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56">
+                </DropdownMenuTrigger> */}
+                {/* <DropdownMenuContent className="w-56">
                   <DropdownMenuLabel>Categories</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuGroup>
@@ -255,7 +255,7 @@ export default function ArticlesList() {
                       </DropdownMenuItem>
                     ))}
                   </DropdownMenuGroup>
-                </DropdownMenuContent>
+                </DropdownMenuContent> */}
               </DropdownMenu>
 
               <DropdownMenu>
@@ -362,7 +362,7 @@ export default function ArticlesList() {
                     </span>
                   </div>
                   <div className="mt-2">
-                    <span
+                    {/* <span
                       className={`text-xs px-2 py-1 rounded-full ${
                         article.predictionTarget === "Depresi"
                           ? "bg-red-500/20 text-red-300"
@@ -370,7 +370,7 @@ export default function ArticlesList() {
                       }`}
                     >
                       {article.predictionTarget}
-                    </span>
+                    </span> */}
                   </div>
                 </CardContent>
               </Card>

@@ -181,7 +181,7 @@ export default function ArticleDetail() {
           </div>
         ) : article ? (
           <div className="space-y-6">
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
               <div
                 className={`py-1.5 px-4 rounded-full text-sm font-medium ${
                   article.predictionTarget === "Depresi"
@@ -191,7 +191,7 @@ export default function ArticleDetail() {
               >
                 Artikel untuk {article.predictionTarget}
               </div>
-            </div>
+            </div> */}
 
             <h1 className="text-3xl md:text-4xl font-bold text-center text-white leading-tight">
               {article.title}

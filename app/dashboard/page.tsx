@@ -851,7 +851,7 @@ export default function Dashboard({
                               %
                             </p>
                             <p className="text-xs font-medium text-indigo-300/80">
-                              this month
+                              this time
                             </p>
                           </div>
                         </div>

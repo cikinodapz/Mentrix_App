@@ -417,7 +417,7 @@ export default function AssessmentForm({
           />
           {answers[question.id] && (
             <p className="text-sm text-purple-200">
-              Age: {answers[question.id]} years
+              {/* Age: {answers[question.id]} years */}
             </p>
           )}
         </div>
@@ -463,7 +463,7 @@ export default function AssessmentForm({
             Depression Assessment
           </h1>
         </div>
-        <Button
+        {/* <Button
           variant="outline"
           size="sm"
           onClick={handleSave}
@@ -472,7 +472,7 @@ export default function AssessmentForm({
         >
           <Save className="w-4 h-4 mr-2" />
           {isSaving ? "Saving..." : "Save Progress"}
-        </Button>
+        </Button> */}
       </header>
 
       <div className="w-full h-2 bg-purple-900/30 rounded-full mb-8">
@@ -558,9 +558,9 @@ export default function AssessmentForm({
               <h3 className="text-xl font-bold text-white">
                 Assessment Result
               </h3>
-              <div className="p-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
+              {/* <div className="p-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
                 <BrainCircuit className="w-5 h-5 text-white" />
-              </div>
+              </div> */}
             </div>
 
             {assessmentResult && (
